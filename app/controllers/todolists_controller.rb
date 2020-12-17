@@ -10,7 +10,7 @@ class TodolistsController < ApplicationController
   end
 
   def index
-  	@lists = List.all
+  	@lists = List.all.order(id: "desc")
   end
 
   def show
